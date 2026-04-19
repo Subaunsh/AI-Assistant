@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Protest+Guerrilla&family=Roboto+Condensed:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    background: #111;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+    margin: 0;   /* ✅ ensure no gap */
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    padding-top: 0;
+}
+
+.nav-logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(26,189,214);
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover{
+    color: rgb(206,14,94);
+}
+
+
+
+/* History Button */
+#historyBtn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+
+    background: linear-gradient(to right, rgb(26,189,214), rgb(206,14,94));
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* History Panel */
+#historyPanel{
+    position: fixed;
+    right: -350px; /* hidden */
+    top: 0;
+
+    width: 300px;
+    height: 100vh;
+
+    background: #111;
+    color: white;
+
+    padding: 20px;
+    overflow-y: auto;
+
+    transition: 0.4s;
+    box-shadow: -5px 0 10px rgba(0,0,0,0.5);
+
+    z-index: 1001;
+}
+
+#historyPanel.active{
+    right: 0;
+}
+
+/* Close Button */
+#closeHistory{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+}
+
+#closeHistory:hover{
+    color: rgb(206,14,94);
+}
+
+/* History Content */
+#historyContent{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Individual Chat Item */
+.history-item{
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #222;
+    border-radius: 10px;
+}
+
+/* Clear Button */
+#clearBtn{
+    margin-top: 15px;
+    padding: 8px;
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgb(206,14,94);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+/* Assistant Section */
+.assistant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo{
+    width: 20vw;
+}
+
+h1{
+    color: white;
+    font-family: "Protest Guerrilla", sans-serif;
+    text-align: center;
+}
+
+#name{
+    color: rgb(206, 14, 94);
+    font-size: 50px;
+}
+
+#va{
+    color: rgb(26, 189, 214);
+    font-size: 50px;
+}
+
+#voice{
+    width: 200px;
+    padding-top: 20px;
+    display: none;
+}
+
+/* Button */
+#btn{
+    width: 250px;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(26,189,214), rgb(206,14,94));
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 18px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btn:hover{
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(26,189,214,0.7), 0 0 20px rgba(206,14,94,0.7);
+}
+
+/* Output Box */
+#outputBox{
+    width: 80%;
+    max-width: 500px;
+    min-height: 60px;
+
+    background: #111;
+    color: white;
+
+    padding: 15px;
+    border-radius: 15px;
+
+    text-align: center;
+    font-size: 16px;
+
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}

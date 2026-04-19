@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sifra, My Virtual Assistant</title>
+    <!--Link Google fonts for icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- History Button -->
+<button id="historyBtn">📜 History</button>
+
+<!-- History Panel -->
+<div id="historyPanel">
+    <span id="closeHistory">&times;</span>
+
+    <h2>Conversation History</h2>
+    <div id="historyContent"></div>
+
+    <button id="clearBtn" onclick="clearHistory()">Clear History</button>
+</div>
+
+    <!-- History Panel -->
+    <div id="historyPanel">
+        <h2>Conversation History</h2>
+        <div id="historyContent"></div>
+        <button onclick="clearHistory()">Clear History</button>
+    </div>
+
+
+    <div class="assistant">
+    <img src="logo.png" alt="logo" id="logo">    <h1> I'm <span id="name">Nova</span>, Your <span id="va">Virtual Assistant</span> </h1>
+    <img src="Top Designers You Need to Know_ An interview with Gleb Kuznetsov and Jeshua Nanthakumar.gif" alt="voice" id="voice">
+    
+    <button id="btn">
+        <img src="mic.svg" alt="mic">
+        <span id="content"> Click Here to Talk To Me </span>
+    </button>
+    
+    <div id="outputBox">Your response will appear here...</div>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
